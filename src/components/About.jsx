@@ -15,8 +15,15 @@ const About = () => {
               <div className="avatar">
                 <img src={profileLogo} alt="Himanshu Gupta" className="profile-logo" />
               </div>
-              </p>
+              <div className="status-indicator"></div>
             </div>
+            <h3>Himanshu Gupta</h3>
+            <p className="role">Full Stack Developer</p>
+            <p className="bio">
+              Passionate software developer with expertise in building scalable web applications
+              using modern technologies. Experienced in both frontend and backend development,
+              with a strong foundation in Java, Spring Boot, and React.
+            </p>
           </div>
 
           {/* Skills Card */}
