@@ -1,7 +1,8 @@
-import profileLogo from '../assets/profile-logo.png';
-
 const About = () => {
-  const skills = ['Java', 'Spring Boot', 'React', 'JavaScript', 'MySQL', 'PostgreSQL', 'Docker', 'Git', 'REST APIs', 'Microservices'];
+  const skills = [
+    "Java", "Spring Boot", "Spring Framework", "Spring Security", "Microservices",
+    "MySQL", "PostgreSQL", "Docker", "RESTful APIs", "Git", "Cloud Deployment"
+  ];
 
   return (
     <section id="about" className="section about-section">
@@ -12,18 +13,26 @@ const About = () => {
           {/* Profile Card */}
           <div className="profile-card glass">
             <div className="profile-header">
-              <div className="avatar">
-                <img src={profileLogo} alt="Himanshu Gupta" className="profile-logo" />
+              <div className="avatar-wrapper">
+                <div className="avatar">
+                  <span>HG</span>
+                </div>
+                <div className="status-indicator"></div>
               </div>
-              <div className="status-indicator"></div>
+              <h3>Himanshu Gupta</h3>
+              <p className="role">Backend Java Developer</p>
             </div>
-            <h3>Himanshu Gupta</h3>
-            <p className="role">Full Stack Developer</p>
-            <p className="bio">
-              Passionate software developer with expertise in building scalable web applications
-              using modern technologies. Experienced in both frontend and backend development,
-              with a strong foundation in Java, Spring Boot, and React.
-            </p>
+            <div className="profile-bio">
+              <p>
+                Passionate about creating scalable, secure backend systems with robust RESTful APIs
+                and optimized database interactions. Specialized in microservices architecture,
+                Docker, and cloud deployment.
+              </p>
+              <p>
+                Leveraging advanced Java 8+ features like streams and lambdas to produce
+                high-performing, enterprise-grade solutions.
+              </p>
+            </div>
           </div>
 
           {/* Skills Card */}
@@ -108,21 +117,17 @@ const About = () => {
         }
 
         .avatar {
-          width: 120px;
-          height: 120px;
+          width: 100px;
+          height: 100px;
           border-radius: 50%;
-          background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+          background: var(--gradient-primary);
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 3px solid rgba(255, 255, 255, 0.1);
-          overflow: hidden;
-        }
-
-        .profile-logo {
-          width: 80%;
-          height: 80%;
-          object-fit: contain;
+          font-size: var(--text-3xl);
+          font-weight: 700;
+          color: white;
+          box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
         }
 
         .status-indicator {
@@ -402,7 +407,7 @@ const About = () => {
           }
         }
       `}</style>
-    </section >
+    </section>
   );
 };
 
